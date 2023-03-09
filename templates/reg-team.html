@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Kranti 2K23</title>
+    <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Rockfest - Music Festival Event, DJ Concert and Night Club Website Template" name="description" />
+    <meta content="" name="keywords" />
+    <meta content="" name="author" />
+    <!-- CSS Files
+    ================================================== -->
+    <link id="bootstrap" href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link id="bootstrap-grid" href="static/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" />
+    <link id="bootstrap-reboot" href="static/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/owl.theme.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/owl.transitions.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/jquery.countdown.css" rel="stylesheet" type="text/css" />
+    <link id="mdb" href="static/css/mdb.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- color scheme -->
+    <link id="colors" href="static/css/colors/scheme-01.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/coloring.css" rel="stylesheet" type="text/css" />
+    <style>
+        select {
+      background-color: orange;
+      color: #e55555;
+      border: none;
+      padding: 10px;
+      border-width: 2px;
+      border-color: black;
+    }
+    option{
+        background-color: black;
+        color: #e50000;
+        border-color: black;
+        border-width: 2px;
+        
+    }
+    </style>
+</head>
+
+<body class="dark-scheme">
+    <div id="wrapper">
+        <div id="preloader">
+            <div class="preloader1"></div>
+        </div>
+        <!-- header begin -->
+        <header class="transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex sm-pt10">
+                            <div class="de-flex-col">
+                                <div class="de-flex-col">
+                                    <!-- logo begin -->
+                                    <div id="logo">
+                                        <a href="index.html">
+                                            <img alt="" src="images/logo.png" />
+                                        </a>
+                                    </div>
+                                    <!-- logo close -->
+                                </div>
+                                <div class="de-flex-col">
+                                </div>
+                            </div>
+                            <div class="de-flex-col header-col-mid">
+                                <!-- mainmenu begin -->
+                                <ul id="mainmenu">
+                                    <li><a href="index.html">Home</a></li>                 
+                                    <li><a href="event-tagline.html">Events</a></li>
+                                    <li><a href="index.html#section-schedule">Schedule</a></li>
+                                    <li><a href="index.html#section-tickets">Register</a></li>
+                                    <li><a href="index.html#section-gallery">Gallery</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div class  ="de-flex-col">
+                                <div class="menu_side_area">
+                                    <a style="border-radius: 15px 50px 30px;" href="video.html" class="btn-main"><i class="fa fa-sign-in"></i><span>WATCH PROMO</span></a>
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+            <!-- header close -->
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+            
+            <!-- section begin -->
+            <section id="subheader" class="text-light" data-bgimage="url(images/e13.png) bottom">
+                    <div class="center-y relative text-center">
+                        <div class="container">
+                            <div class="row">
+                                
+                                <div class="col-md-12 text-center">
+									<h1>Registration</h1>
+                                    <h2> TEAM EVENTS </h2>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <!-- section close -->
+            
+
+            <!-- section begin -->
+			<section aria-label="section">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-8 offset-md-2">
+                            <form name="contactForm" id='contact_form' class="form-border" method="post">
+                                {% csrf_token %}
+                                <div class="row g-custom-x align-items-center">
+                                    
+                                    <div class="col-md-6">
+                                        <h4>Your Name</h4>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type='text' name='Name' id='name' class="form-control" placeholder="Name" required>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="col-md-6">
+                                        <h4>Contact Details</h4>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type='text' name='Phone' id='phone' class="form-control" placeholder="Phone No" required>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="col-md-6">
+                                        <h4>Your Email</h4>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type='text' name='Email' id='email' class="form-control" placeholder="Email ID" required>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="col-md-6">
+                                        <h4>College Name<span class="id-color"></span></h4>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type='text' style="text-transform: uppercase;" name='ticket-a' id='ticket-a' class="form-control" placeholder="College Name" required >
+                                    </div>
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="col-md-6">
+                                        <h4>Year Of Study <span class="id-color"></span></h4>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type='text' name='ticket-c' id='ticket-c' class="form-control" placeholder="Year" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h4>Event Name <span class="id-color"></span></h4>
+                                    </div>
+                                    <div class="col-md-6">
+                                         <select class="col-md-12 mr-30" id="my-dropdown" name="my-dropdown">
+                                          <option value="Geek Speak-Paper Presentation">Geek Speak-Paper Presentation</option>
+                                          <option value="Code Hunt">Code Hunt</option>
+                                          <option value="Shark Tank">Shark Tank</option>
+                                          <option value="Connexions">Connexions</option>
+                                        </select>
+                                     </div>
+
+                                    <div class="col-md-6">
+                                        <h4>Team Count <span class="id-color"></span></h4>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type='text' name='ticket-b' id='ticket-b' class="form-control" placeholder="Team Count" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h4>Team Head Name <span class="id-color"></span></h4>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type='text' name='head' id='ticket-b' class="form-control" placeholder="Team Head Name" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h4>Team Member 1 <span class="id-color"></span></h4>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type='text' name='mem1' id='ticket-b' class="form-control" placeholder="Member 1" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h4>Team Member 2 <span class="id-color"></span></h4>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type='text' name='mem2' id='ticket-b' class="form-control" placeholder="Member 2" >
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <h4>Team Member 3 <span class="id-color"></span></h4>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type='text' name='mem3' id='ticket-b' class="form-control" placeholder="Member 3" >
+                                    </div>
+
+                                    <div class="clearfix"></div>
+
+                                    
+
+
+                                    <div class="col-md-12">
+                                        
+                                        <p id='submit' class="mt20">
+                                            <input type='submit' id='send_message' value='Submit Form' class="btn btn-main">
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div id="success_message" class='success'>
+                                Your Registration has been successfully completed, Thanks for your time. Refresh this page if you want to make more Registrations.
+                            </div>
+                            <div id="error_message" class='error'>
+                                Sorry there was an error sending your form.
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- content close -->
+
+        <a href="#" id="back-to-top"></a>
+        
+        <!-- footer begin -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-1">
+                        <div class="widget">
+                            <h5>Contact Info</h5>
+                            <address class="s1">
+                                <span><i class="id-color fa fa-map-marker fa-lg"></i><a href="https://www.google.com/maps/place/Meenakshi+Sundararajan+Engineering+College/@13.0558678,80.2265366,15z/data=!4m6!3m5!1s0x3a5266f499eee457:0x4d3f7e677496e707!8m2!3d13.0558678!4d80.2265366!16s%2Fm%2F0hndktj">Computer Science Department, Meenakshi Sundararajan Engineering College, Kodambakkam, Chennai</a></span>
+                                <span><i class="id-color fa fa-phone fa-lg"></i>Pranesh:93607 45661</span>
+                                <span><i class="id-color fa fa-phone fa-lg"></i>Aravind:97910 26856</span>
+                                <span><i class="id-color fa fa-envelope-o fa-lg"></i><a
+                                        href="mailto:contact@example.com">kranti2k23@gmail.com</a></span>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-1">
+                        <div class="widget">
+                            <h5>Quick Links</h5>
+                            <ul>
+                                <li><a href="event-tagline.html">Events</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="#section-tickets">Register</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-1">
+                        <div class="widget">
+                            <h5>Events</h5>
+                            <ul>
+                                <li><a href="event-tagline-single.html">Technical</a></li>
+                                <li><a href="event-tagline-single.html">Non-Technical</a></li>
+                                <li><a href="event-tagline-single.html">Workshop</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-1">
+                        <div class="widget">
+                            <h5>More Updates</h5>
+                            <p>Signup to get  more updates on Symposium</p>
+                            <form action="blank.php" class="row form-dark" id="form_subscribe" method="post" name="form_subscribe">
+                                <div class="col text-center">
+                                    <input class="form-control" id="txt_subscribe" name="txt_subscribe" placeholder="enter your email" type="text" /> <a href="#" id="btn-subscribe"><i class="arrow_right bg-color-secondary"></i></a>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </form>
+                            <div class="spacer-10"></div>
+                            <small>Your email is safe with us. We don't spam.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subfooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="de-flex">
+                                <div class="de-flex-col">
+                                    <a href="index.html">
+                                        <img alt="" class="f-logo" src="images/logo.png" /><span class="copy">&copy; Copyright 2023 - Kranti2K23 by Trojan Hex</span>
+                                    </a>
+                                </div>
+                                <div class="de-flex-col">
+                                    <div class="social-icons">
+                                        <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                                        <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
+                                        <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
+                                        <a href="#"><i class="fa fa-rss fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+        
+    </div>
+
+
+    
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+    <script src="static/js/jquery.isotope.min.js"></script>
+    <script src="static/js/easing.js"></script>
+    <script src="static/js/owl.carousel.js"></script>
+    <script src="static/js/OwlCarousel2Thumbs.min.js"></script>
+    <script src="static/js/jquery.magnific-popup.min.js"></script>
+    <script src="static/js/enquire.min.js"></script>
+    <script src="static/js/jquery.plugin.js"></script>
+    <script src="static/js/jquery.countTo.js"></script>
+    <script src="static/js/jquery.countdown.js"></script>
+    <script src="static/js/jquery.lazy.min.js"></script>
+    <script src="static/js/jquery.lazy.plugins.min.js"></script>
+    <script src="static/js/jquery.smartsticky.min.js"></script>
+    <script src="static/js/designesia.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+    <script src="form.js"></script>
+
+
+</body>
+
+</html>

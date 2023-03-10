@@ -31,3 +31,106 @@ def registerTeam(request):
         r.save()
         return HttpResponse("<h1>Success</h1>")
     return render(request,"reg-team.html")
+
+def registerFifa(request):
+    if request.method=="POST":
+        print(request.POST)
+        email=request.POST.get("Email","")
+        team_name=request.POST.get("Team-Name","")
+        college_name=request.POST.get("ticket-a","")
+        member_name1=request.POST.get("Mem-Name-1","")
+        member_name2=request.POST.get("Mem-Name-2","")
+        mem1_phno=request.POST.get("Phone-1","")
+        mem2_phno=request.POST.get("Phone-2","")
+        online_eve_name=request.POST.get("my-dropdown","")
+        year_of_study=request.POST.get("ticket-c","")
+        attachment=request.FILES.get("filename","")
+        r=FifaRegistration(email=email,team_name=team_name,college_name=college_name,member1=member_name1,member2=member_name2,phone1=mem1_phno,phone2=mem2_phno,event=online_eve_name,year_of_study=year_of_study,payment_image=attachment)
+        r.save()
+        return HttpResponse("<h1>Success</h1>")
+        
+    return render(request,"reg-fifa.html")
+
+def registerCod(request):
+    if request.method=="POST":
+        
+        team_name=request.POST.get("TName",""),
+        lead_name=request.POST.get("Name","")
+        lead_ph_no=request.POST.get("Phone","")
+        mem2=request.POST.get("Name2","")
+        mem3=request.POST.get("Name3","")
+        email=request.POST.get("Email","")
+        event_name=request.POST.get("my-dropdown","")
+        year=request.POST.get("ticket-c")
+        payment=request.FILES.get("filename","")
+        college_name=request.POST.get("ticket-a","")
+        r=CodRegistration(
+            team_name=team_name,
+            lead_name=lead_name,
+            lead_ph_no=lead_ph_no,
+            mem2=mem2,
+            mem3=mem3,
+            email=email,
+            event_name=event_name,
+            year=year,
+            payment=payment,
+            college_name=college_name
+        )
+        r.save()
+        return HttpResponse("<h1>Success</h1>")
+    
+        
+    return render(request,"reg_cod.html")
+
+def registerValo(request):
+    if request.method=="POST":
+        teamname=request.POST.get("tName","")
+        leadname=request.POST.get("lName","")
+        leadnumber=request.POST.get("lPhone","")
+        riotid=request.POST.get("rName","")
+        discordid=request.POST.get("dName","")
+        mem2ph=request.POST.get("Name2ph","")
+        mem2=request.POST.get("Name2","")
+        mem2dis=request.POST.get("Name2dis","")
+        mem3=request.POST.get("Name3","")
+        mem3dis=request.POST.get("Name3dis","")
+        mem4=request.POST.get("Name4","")
+        mem4dis=request.POST.get("Name4dis","")
+        mem5=request.POST.get("Name5","")
+        mem5dis=request.POST.get("Name5dis","")
+        email=request.POST.get("Email","")
+        college_name=request.POST.get("ticket-a","")
+        event_name=request.POST.get("my-dropdown","")
+        year=request.POST.get("ticket-c","")
+        payment=request.FILES.get("filename","")
+
+        r=ValoRegistration(
+            teamname=teamname,
+            leadname=leadname,
+            leadnumber=leadnumber,
+            riotid=riotid,
+            discordid=discordid,
+            mem2=mem2,
+            mem2dis=mem2dis,
+            mem2ph=mem2ph,
+            mem3=mem3,
+            mem3dis=mem3dis,
+            mem4=mem4,
+            mem4dis=mem4dis,
+            mem5=mem5,
+            mem5dis=mem5dis,
+            event_name=event_name,
+            email=email,
+            year=year,
+            college_name=college_name,
+            payment=payment
+        )
+        r.save()
+        return HttpResponse("<h1>Success</h1>")
+    return render(request,"reg_valo.html")
+
+def index(request):
+    return render(request,"index.html")
+
+def home(request):
+    return render(request,"home.html")

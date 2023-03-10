@@ -134,3 +134,6 @@ def index(request):
 
 def home(request):
     return render(request,"home.html")
+
+def eventTagline(request):
+    return render(request,"event-tagline.html")

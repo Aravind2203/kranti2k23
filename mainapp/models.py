@@ -85,4 +85,4 @@ class ValoRegistration(models.Model):
     payment=models.ImageField(null=True,blank=True,upload_to="valo/")
 
     def __str__(self) -> str:
-        return str(id)
+        return str(self.id)

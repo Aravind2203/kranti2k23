@@ -120,7 +120,7 @@ $(document).ready(function () {
 	// Initiate typed.js text effect (done custom for each typed text effect)
 	$(".animated-text-effect").typed({ 
 		// Enter your texts here, these texts are applied to dark homepages
-		strings: ["Innovate to Elevate^", "The Ultimate Warp Journey^"], 
+		strings: ["Innovate to Elevate !!^", "Unleash Power of Technology^"], 
 		contentType: "text", 
 		typeSpeed: 30, 
 		loop: true, 

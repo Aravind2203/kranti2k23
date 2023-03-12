@@ -6,7 +6,7 @@
     <link rel="icon" href="static/images/icon.png" type="image/gif" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="Rockfest - Music Festival Event, DJ Concert and Night Club Website Template" name="description" />
+    <meta content="KRANTI 2K23" name="description" />
     <meta content="" name="keywords" />
     <meta content="" name="author" />
     <!-- CSS Files
@@ -81,7 +81,7 @@
                             </div>
                             <div class  ="de-flex-col">
                                 <div class="menu_side_area">
-                                    <a style="border-radius: 15px 50px 30px; box-shadow: 0px 0px 5px 5px red;" href="video.html" class="btn-main"><i class="fa fa-sign-in"></i><span>WATCH PROMO</span></a>
+                                    <a style="border-radius: 15px 50px 30px; box-shadow: 0px 0px 5px 5px #e50000;" href="video.html" class="btn-main"><i class="fa fa-sign-in"></i><span>WATCH PROMO</span></a>
                                     <span id="menu-btn"></span>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@
             <div id="top"></div>
             
             <!-- section begin -->
-            <section id="subheader" class="text-light" data-bgimage="url(static/images/background/subheader.jpg) bottom">
+            <section id="subheader" class="text-light" data-bgimage="url(static/images/e10.png) bottom">
                     <div class="center-y relative text-center">
                         <div class="container">
                             <div class="row">
@@ -121,120 +121,120 @@
 
                         <div class="col-md-8 offset-md-2">
                             <form name="contactForm" id='contact_form' class="form-border" method="post" action="/reg-fifa.html" enctype="multipart/form-data">
-                               {% csrf_token %}
-                                <div class="row g-custom-x align-items-center">
-                                    
+                                {% csrf_token %}
+                                 <div class="row g-custom-x align-items-center">
+                                     
+                                     <!-- <div class="col-md-6">
+                                         <h4>Your Name</h4>
+                                     </div>
+                                     <div class="col-md-6">
+                                         <input type='text' name='Name' id='name' class="form-control" placeholder="Name" required>
+                                     </div>
+ 
+                                     <div class="clearfix"></div>
+ 
+                                     <div class="col-md-6">
+                                         <h4>Contact Details</h4>
+                                     </div>
+                                     <div class="col-md-6">
+                                         <input type='text' name='Phone' id='phone' class="form-control" placeholder="Phone No" required>
+                                     </div> -->
+ 
+                                     <!-- <div class="clearfix"></div> -->
+ 
+                                     <div class="col-md-6">
+                                         <h4>Your Email</h4>
+                                     </div>
+                                     <div class="col-md-6">
+                                         <input type='text' name='Email' id='email' class="form-control" placeholder="Email ID" required>
+                                     </div>
+ 
+ 
+                                     <div class="clearfix"></div>
+                                     <div class="col-md-6">
+                                         <h4>Team Name</h4>
+                                     </div>
+                                     <div class="col-md-6">
+                                         <input type='text' name='Team-Name' id='team-Name' class="form-control" placeholder="Team Name" required>
+                                     </div>
+ 
+ 
+ 
+                                     <div class="clearfix"></div>
+ 
+                                     <div class="col-md-6">
+                                         <h4>College Name<span class="id-color"></span></h4>
+                                     </div>
+                                     <div class="col-md-6">
+                                         <input type='text' style="text-transform: uppercase;" name='ticket-a' id='ticket-a' class="form-control" placeholder="College Name" required >
+                                     </div>
+ 
+                                     <div class="clearfix"></div>
+                                     <div class="col-md-6">
+                                         <h4>Member Name 1</h4>
+                                     </div>
+                                     <div class="col-md-6">
+                                         <input type='text' name='Mem-Name-1' id='mem-Name-1' class="form-control" placeholder="Member Name" required>
+                                     </div>
+ 
+ 
+                                     <div class="clearfix"></div>
+                                     <div class="col-md-6">
+                                         <h4>Member Name 2</h4>
+                                     </div>
+                                     <div class="col-md-6">
+                                         <input type='text' name='Mem-Name-2' id='mem-Name-2' class="form-control" placeholder="Member Name" >
+                                     </div>
+ 
+ 
+                                     <div class="clearfix"></div>
+ 
+                                     <div class="col-md-6">
+                                         <h4>MEMBER 1 PHONE NO</h4>
+                                     </div>
+                                     <div class="col-md-6">
+                                         <input type='text' name='Phone-1' id='phone-1' class="form-control" placeholder="Phone No" required>
+                                     </div> 
+ 
+                                     <div class="clearfix"></div>
+ 
+                                     <div class="col-md-6">
+                                         <h4>MEMBER 2 PHONE NO</h4>
+                                     </div>
+                                     <div class="col-md-6">
+                                         <input type='text' name='Phone-2' id='phone-2' class="form-control" placeholder="Phone No" >
+                                     </div> 
+ 
+ 
+ 
+ 
+ 
+                                     <div class="clearfix"></div>
+ 
+                                     <div class="col-md-6">
+                                         <h4>Online Event Name <span class="id-color"></span></h4>
+                                     </div>
+                                     <div class="col-md-6">
+                                         <select class="col-md-12 mr-30" id="my-dropdown" name="my-dropdown">
+                                          <option value="option1">FIFA</option>
+                                          <!-- <option value="option2">Option 2</option>
+                                          <option value="option3">Option 3</option> -->
+                                        </select>
+                                     </div>
+                                     
+                                     <div class="clearfix"></div>
+ 
+                                     <div class="col-md-6">
+                                         <h4>Year Of Study <span class="id-color"></span></h4>
+                                     </div>
+                                     <div class="col-md-6">
+                                         <input type='text' name='ticket-c' id='ticket-c' class="form-control" placeholder="Year" required>
+                                     </div>
+ 
+ 
+                                     <div class="clearfix"></div>
+
                                     <!-- <div class="col-md-6">
-                                        <h4>Your Name</h4>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type='text' name='Name' id='name' class="form-control" placeholder="Name" required>
-                                    </div>
-
-                                    <div class="clearfix"></div>
-
-                                    <div class="col-md-6">
-                                        <h4>Contact Details</h4>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type='text' name='Phone' id='phone' class="form-control" placeholder="Phone No" required>
-                                    </div> -->
-
-                                    <!-- <div class="clearfix"></div> -->
-
-                                    <div class="col-md-6">
-                                        <h4>Your Email</h4>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type='text' name='Email' id='email' class="form-control" placeholder="Email ID" required>
-                                    </div>
-
-
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6">
-                                        <h4>Team Name</h4>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type='text' name='Team-Name' id='team-Name' class="form-control" placeholder="Team Name" required>
-                                    </div>
-
-
-
-                                    <div class="clearfix"></div>
-
-                                    <div class="col-md-6">
-                                        <h4>College Name<span class="id-color"></span></h4>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type='text' style="text-transform: uppercase;" name='ticket-a' id='ticket-a' class="form-control" placeholder="College Name" required >
-                                    </div>
-
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6">
-                                        <h4>Member Name 1</h4>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type='text' name='Mem-Name-1' id='mem-Name-1' class="form-control" placeholder="Member Name" required>
-                                    </div>
-
-
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6">
-                                        <h4>Member Name 2</h4>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type='text' name='Mem-Name-2' id='mem-Name-2' class="form-control" placeholder="Member Name" >
-                                    </div>
-
-
-                                    <div class="clearfix"></div>
-
-                                    <div class="col-md-6">
-                                        <h4>MEMBER 1 PHONE NO</h4>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type='text' name='Phone-1' id='phone-1' class="form-control" placeholder="Phone No" required>
-                                    </div> 
-
-                                    <div class="clearfix"></div>
-
-                                    <div class="col-md-6">
-                                        <h4>MEMBER 2 PHONE NO</h4>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type='text' name='Phone-2' id='phone-2' class="form-control" placeholder="Phone No" >
-                                    </div> 
-
-
-
-
-
-                                    <div class="clearfix"></div>
-
-                                    <div class="col-md-6">
-                                        <h4>Online Event Name <span class="id-color"></span></h4>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <select class="col-md-12 mr-30" id="my-dropdown" name="my-dropdown">
-                                         <option value="option1">FIFA</option>
-                                         <!-- <option value="option2">Option 2</option>
-                                         <option value="option3">Option 3</option> -->
-                                       </select>
-                                    </div>
-                                    
-                                    <div class="clearfix"></div>
-
-                                    <div class="col-md-6">
-                                        <h4>Year Of Study <span class="id-color"></span></h4>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type='text' name='ticket-c' id='ticket-c' class="form-control" placeholder="Year" required>
-                                    </div>
-
-
-                                    <div class="clearfix"></div>
-
-                                    <div class="col-md-6">
                                         <h4>Attach screenshot of payment (name the file as your team name) <span class="id-color"></span></h4>
                                     </div>
                                     <div class="col-md-6">
@@ -246,7 +246,7 @@
                                     <div class="col-md-6">
                                         <h4> gpay number: +91 73584 72065<span class="id-color"></span></h4>
                                     </div>
-                                    <div class="col-md-12">
+                                    <div class="col-md-12"> -->
                                         
                                         <p id='submit' class="mt20">
                                             <input type='submit' id='send_message' value='Submit Form' style="border-radius: 50px 15px;" class="btn btn-main">
@@ -293,7 +293,7 @@
                             <h5 style="color:#e50000;">Quick Links</h5>
                             <ul>
                                 <li><a href="event-tagline.html">Events</a></li>
-                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="home.html#section-gallery">Gallery</a></li>
                                 <li><a href="contact.html">Contact Us</a></li>
                                 <li><a href="#section-tickets">Register</a></li>
                             </ul>
@@ -333,7 +333,7 @@
                             <div class="de-flex">
                                 <div class="de-flex-col">
                                     <a href="home.html">
-                                        <img alt="" class="f-logo" src="static/images/logo.png" /><span class="copy">&copy; Copyright 2023 - Kranti2K23 by Trojan Hex</span>
+                                        <img alt="" class="f-logo" src="static/images/logo.png" /><span class="copy">&copy; Copyright 2023 - Kranti2K23 Designed and Developed By The Matrix Mavericks</span>
                                     </a>
                                 </div>
                                 <div class="de-flex-col">
@@ -366,7 +366,6 @@
     <script src="static/js/jquery.isotope.min.js"></script>
     <script src="static/js/easing.js"></script>
     <script src="static/js/owl.carousel.js"></script>
-    <script src="static/js/OwlCarousel2Thumbs.min.js"></script>
     <script src="static/js/jquery.magnific-popup.min.js"></script>
     <script src="static/js/enquire.min.js"></script>
     <script src="static/js/jquery.plugin.js"></script>
@@ -374,10 +373,11 @@
     <script src="static/js/jquery.countdown.js"></script>
     <script src="static/js/jquery.lazy.min.js"></script>
     <script src="static/js/jquery.lazy.plugins.min.js"></script>
-    <script src="static/js/jquery.smartsticky.min.js"></script>
+    <script src="static/js/mdb.min.js"></script>
+    <script src="static/js/jquery.countdown.js"></script>
+    <script src="static/js/countdown-custom.js"></script>
+    <script src="static/js/cookit.js"></script>
     <script src="static/js/designesia.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
-    <script src="form.js"></script>
 
 
 </body>

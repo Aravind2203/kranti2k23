@@ -14,7 +14,7 @@ def registerSolo(request):
         year_of_study=request.POST.get("ticket-c")
         r=Registration(name=name,number=number,email=email,college=college,event_name=event,year_of_study=year_of_study)
         r.save()
-        return HttpResponse("<h1>Success</h1>")
+        return render(request,"landing-page.html")
     return render(request,"reg-solo.html")
 
 @csrf_exempt
@@ -33,7 +33,7 @@ def registerTeam(request):
         member_3=request.POST.get("mem3","")
         r=Registration(name=name,number=number,email=email,college=college,event_name=event,year_of_study=year_of_study,team_count=team_count,head_name=head_name,member_1=member_1,member_2=member_2,member_3=member_3)
         r.save()
-        return HttpResponse("<h1>Success</h1>")
+        return render(request,"landing-page.html")
     return render(request,"reg-team.html")
 
 @csrf_exempt
@@ -52,7 +52,7 @@ def registerFifa(request):
         attachment=request.FILES.get("filename","")
         r=FifaRegistration(email=email,team_name=team_name,college_name=college_name,member1=member_name1,member2=member_name2,phone1=mem1_phno,phone2=mem2_phno,event=online_eve_name,year_of_study=year_of_study,payment_image=attachment)
         r.save()
-        return HttpResponse("<h1>Success</h1>")
+        return render(request,"landing-page.html")
         
     return render(request,"reg-fifa.html")
 
@@ -83,7 +83,7 @@ def registerCod(request):
             college_name=college_name
         )
         r.save()
-        return HttpResponse("<h1>Success</h1>")
+        return render(request,"landing-page.html")
     
         
     return render(request,"reg_cod.html")
@@ -133,7 +133,7 @@ def registerValo(request):
             payment=payment
         )
         r.save()
-        return HttpResponse("<h1>Success</h1>")
+        return render(request,"landing-page.html")
     return render(request,"reg_valo.html")
 
 def index(request):
@@ -180,3 +180,9 @@ def valorant(request):
 
 def cod(request):
     return render(request,"cod.html")
+
+def contact(request):
+    return render(request,"contact.html")
+
+def video(request):
+    return render(request,"video.html")

@@ -20,5 +20,7 @@ urlpatterns = [
     path("gaming-events.html",gamingevent),
     path("fifa.html",fifa),
     path("valorant.html",valorant),
-    path("cod.html",cod)
+    path("cod.html",cod),
+    path("contact.html",contact),
+    path("video.html",video),
 ]

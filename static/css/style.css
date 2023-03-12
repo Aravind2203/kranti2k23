@@ -2860,7 +2860,7 @@ a.btn-add_to_cart {
 }
 
 a.btn-main:hover{
-    color: black;
+    color: white;
 }
 .btn-add_to_cart:before,
 a.btn-add_to_cart:before {
@@ -2881,9 +2881,9 @@ a.btn-line {
     text-align: center;
     color: #fff;
     
-    border-radius: 0px;
+    border-radius: 15px 50px;
     -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
+    /* -webkit-border-radius: 0px; */
     outline: 0;
     font-weight: 1000;
     text-decoration: none;
@@ -3335,6 +3335,7 @@ hr {
 .form-subscribe {
     display: table;
     margin: 0 auto;
+    
 }
 
 .form-subscribe input[type=text] {
@@ -3969,7 +3970,7 @@ span.teaser {
 .text-white h5,
 .text-white h6 {
     color: orangered;
-    text-shadow: 5px 5px 8px #FF0000;
+    text-shadow: 5px 5px 8px black;
 }
 .text-red  h1{
     color: white;
@@ -5174,6 +5175,7 @@ i.font60 {
 
 .pricing-s1:hover{
     transform: scale(1.05);
+    box-shadow: 0 0 5px 5px #e50000;
 }
 
 .pricing-s1:hover .price{

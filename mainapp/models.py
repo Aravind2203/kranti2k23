@@ -1,14 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Event(models.Model):
-    name=models.CharField(max_length=256)
-    description=models.TextField(null=True,blank=True)
-    rules=models.TextField(null=True,blank=True)
-    poster=models.ImageField(null=True,blank=True,upload_to="eventposters")
 
-    def __str__(self):
-        return self.name
 class FifaRegistration(models.Model):
     email=models.CharField(max_length=256,null=True,blank=True)
     team_name=models.CharField(max_length=256,null=True,blank=True)
@@ -19,7 +12,7 @@ class FifaRegistration(models.Model):
     phone2=models.CharField(max_length=10,null=True,blank=True)
     event=models.CharField(max_length=256,null=True,blank=True)
     year_of_study=models.PositiveIntegerField(null=True,blank=True)
-    payment_image=models.ImageField(null=True,blank=True,upload_to="fifa/")
+   
 
     def __str__(self):
         return str(self.id)
@@ -54,7 +47,7 @@ class CodRegistration(models.Model):
     email=models.CharField(max_length=256,null=True,blank=True)
     event_name=models.CharField(max_length=50,null=True,blank=True)
     year=models.PositiveIntegerField(null=True,blank=True)
-    payment=models.ImageField(null=True,blank=True,upload_to="cod/")
+    
     college_name=models.CharField(max_length=256,null=True,blank=True)
 
     
@@ -82,7 +75,16 @@ class ValoRegistration(models.Model):
     college_name=models.CharField(max_length=256,null=True,blank=True)
     event_name=models.CharField(max_length=256,null=True,blank=True)
     year=models.PositiveBigIntegerField(null=True,blank=True)
-    payment=models.ImageField(null=True,blank=True,upload_to="valo/")
+    
 
     def __str__(self) -> str:
+        return str(self.id)
+
+class Contact(models.Model):
+    name=models.CharField(max_length=256,null=True,blank=True)
+    email=models.CharField(max_length=256,null=True,blank=True)
+    phone=models.CharField(max_length=256,null=True,blank=True)
+    message=models.TextField(null=True,blank=True)
+
+    def __str__(self):
         return str(self.id)

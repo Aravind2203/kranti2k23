@@ -181,7 +181,21 @@ def valorant(request):
 def cod(request):
     return render(request,"cod.html")
 
+@csrf_exempt
 def contact(request):
+    if request.method=="POST":
+        name=request.POST.get("Name","")
+        email=request.POST.get("Email","")
+        phone=request.POST.get("phone","")
+        message=request.POST.get("message","")
+        c=Contact(
+            name=name,
+            email=email,
+            phone=phone,
+            message=message
+        )
+        c.save()
+        
     return render(request,"contact.html")
 
 def video(request):

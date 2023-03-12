@@ -74,10 +74,21 @@ WSGI_APPLICATION = 'kranti.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
+
+DATABASES={
+    'default':{
+    'ENGINE':'django.db.backends.postgresql',
+    'NAME':'postgres',
+    'HOST':'db.lxvlckkxcmzejpcucmxb.supabase.co',
+    'USER':'postgres',
+    'POST':5432,
+    'PASSWORD':'kranti2k23#'
     }
 }
 

@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainapp'
+    'mainapp',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -136,10 +137,16 @@ if(DEBUG==True):
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 else:
-    STATIC_URL = '/static/'
-    MEDIA_URL='/media/'
-    STATIC_ROOT=os.path.join(BASE_DIR,'static')
-    MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+    DEFAULT_FILE_STORAGE = 'kranti.custom_azure.AzureMediaStorage'
+    STATICFILES_STORAGE = 'kranti.custom_azure.AzureStaticStorage'
+
+    STATIC_LOCATION = "static"
+    MEDIA_LOCATION = "media"
+
+    AZURE_ACCOUNT_NAME = "kranti2k23"
+    AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
+    STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
+    MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

@@ -68,7 +68,7 @@ TEMPLATES = [
         },
     },
 ]
-
+CSRF_TRUSTED_ORIGINS=['https://kranti2k23.tech']
 WSGI_APPLICATION = 'kranti.wsgi.application'
 
 

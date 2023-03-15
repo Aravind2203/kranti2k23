@@ -23,4 +23,5 @@ urlpatterns = [
     path("cod.html",cod),
     path("contact.html",contact),
     path("video.html",video),
+    path("success",success,name="success")
 ]

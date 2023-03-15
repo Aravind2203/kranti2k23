@@ -17,6 +17,11 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
+
+admin.site.site_header='Kranti Admin'
+admin.site.site_title='Kranti Admin'
+admin.site.index_title='Kranti Admin'
+
 urlpatterns = [
     path('krantiadmin/', admin.site.urls),
     path('',include('mainapp.urls'))

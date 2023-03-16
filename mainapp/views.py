@@ -50,7 +50,7 @@ def registerFifa(request):
         online_eve_name=request.POST.get("my-dropdown","")
         year_of_study=request.POST.get("ticket-c",0)
         attachment=request.FILES.get("filename","")
-        r=FifaRegistration(email=email,team_name=team_name,college_name=college_name,member1=member_name1,member2=member_name2,phone1=mem1_phno,phone2=mem2_phno,event=online_eve_name,year_of_study=year_of_study,payment_image=attachment)
+        r=FifaRegistration(email=email,team_name=team_name,college_name=college_name,member1=member_name1,member2=member_name2,phone1=mem1_phno,phone2=mem2_phno,event=online_eve_name,year_of_study=year_of_study)
         r.save()
         return redirect("success")
         
@@ -79,7 +79,6 @@ def registerCod(request):
             email=email,
             event_name=event_name,
             year=year,
-            payment=payment,
             college_name=college_name
         )
         r.save()
@@ -109,7 +108,7 @@ def registerValo(request):
         college_name=request.POST.get("ticket-a","")
         event_name=request.POST.get("my-dropdown","")
         year=request.POST.get("ticket-c","")
-        payment=request.FILES.get("filename","")
+        
 
         r=ValoRegistration(
             teamname=teamname,
@@ -130,7 +129,7 @@ def registerValo(request):
             email=email,
             year=year,
             college_name=college_name,
-            payment=payment
+           
         )
         r.save()
         return redirect("success")

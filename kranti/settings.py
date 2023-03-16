@@ -70,7 +70,7 @@ TEMPLATES = [
 ]
 CSRF_TRUSTED_ORIGINS=['https://kranti2k23.tech']
 WSGI_APPLICATION = 'kranti.wsgi.application'
-
+SKEY="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"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

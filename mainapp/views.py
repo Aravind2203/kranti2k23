@@ -1,6 +1,7 @@
 from django.shortcuts import render,HttpResponse,redirect
 from .models import *
 from django.views.decorators.csrf import csrf_exempt
+from .email import *
 # Create your views here.
 
 @csrf_exempt
@@ -14,6 +15,7 @@ def registerSolo(request):
         year_of_study=request.POST.get("ticket-c")
         r=Registration(name=name,number=number,email=email,college=college,event_name=event,year_of_study=year_of_study)
         r.save()
+        sendmail(name,email)
         return redirect("success")
     return render(request,"reg-solo.html")
 
@@ -33,6 +35,7 @@ def registerTeam(request):
         member_3=request.POST.get("mem3","")
         r=Registration(name=name,number=number,email=email,college=college,event_name=event,year_of_study=year_of_study,team_count=team_count,head_name=head_name,member_1=member_1,member_2=member_2,member_3=member_3)
         r.save()
+        sendmail(name,email)
         return redirect("success")
     return render(request,"reg-team.html")
 
@@ -52,6 +55,7 @@ def registerFifa(request):
         attachment=request.FILES.get("filename","")
         r=FifaRegistration(email=email,team_name=team_name,college_name=college_name,member1=member_name1,member2=member_name2,phone1=mem1_phno,phone2=mem2_phno,event=online_eve_name,year_of_study=year_of_study)
         r.save()
+        sendmail(member_name1,email)
         return redirect("success")
         
     return render(request,"reg-fifa.html")
@@ -82,6 +86,7 @@ def registerCod(request):
             college_name=college_name
         )
         r.save()
+        sendmail(lead_name,email)
         return redirect("success")
     
         
@@ -132,6 +137,7 @@ def registerValo(request):
            
         )
         r.save()
+        sendmail(leadname,email)
         return redirect("success")
     return render(request,"reg_valo.html")
 

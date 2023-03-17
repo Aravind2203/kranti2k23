@@ -33,3 +33,47 @@ def sendmail(name,email,event=None):
         print(response.headers)
     except Exception as e:
         print(e.message)
+
+def secondmail(name,email):
+    content=f"""
+    <div style="font-family: "Times New Roman", Times, serif"><strong>FROM:</strong><br>
+
+    Team Kranti<br>
+
+    Meenakshi Sundararajan Engineering College,<br>
+
+    Kodambakkam,<br>
+
+    Chennai-24<br>
+
+    
+
+    Respected ma’am/sir,<br>
+
+    <strong>SUB</strong> : Requesting permission for On Duty<br>
+
+    {name} has registered for participating in the national level technical symposium – <strong> Kranti 2k23</strong> to be conducted by the Department of Computer Science and Engineering in Meenakshi Sundararajan Engineering College, Kodambakkam, Chennai on 24th March 2023. We request you grant them On Duty permission to attend the event.
+
+    
+    <br>
+    Thank You,
+    <br>
+    Yours Sincerely,
+    <br>
+    Team Kranti
+    </div>
+    
+    """
+    message = Mail(
+    from_email='kranti2k23@gmail.com',
+    to_emails=email,
+    subject='Request for OD',
+    html_content=content)
+    try:
+        sg = SendGridAPIClient(settings.SKEY)
+        response = sg.send(message)
+        print(response.status_code)
+        print(response.body)
+        print(response.headers)
+    except Exception as e:
+        print(e.message)

@@ -16,6 +16,7 @@ def registerSolo(request):
         r=Registration(name=name,number=number,email=email,college=college,event_name=event,year_of_study=year_of_study)
         r.save()
         sendmail(name,email,event)
+        secondmail(name,email)
         return redirect("success")
     return render(request,"reg-solo.html")
 
@@ -36,6 +37,7 @@ def registerTeam(request):
         r=Registration(name=name,number=number,email=email,college=college,event_name=event,year_of_study=year_of_study,team_count=team_count,head_name=head_name,member_1=member_1,member_2=member_2,member_3=member_3)
         r.save()
         sendmail(name,email,event)
+        secondmail(name,email)
         return redirect("success")
     return render(request,"reg-team.html")
 
@@ -56,6 +58,7 @@ def registerFifa(request):
         r=FifaRegistration(email=email,team_name=team_name,college_name=college_name,member1=member_name1,member2=member_name2,phone1=mem1_phno,phone2=mem2_phno,event=online_eve_name,year_of_study=year_of_study)
         r.save()
         sendmail(member_name1,email,online_eve_name)
+        secondmail(member_name1+","+member_name2,email)
         return redirect("success")
         
     return render(request,"reg-fifa.html")
@@ -87,6 +90,7 @@ def registerCod(request):
         )
         r.save()
         sendmail(lead_name,email,event_name)
+        secondmail(lead_name+','+mem2+","+mem3,email)
         return redirect("success")
     
         
@@ -138,6 +142,7 @@ def registerValo(request):
         )
         r.save()
         sendmail(leadname,email,event_name)
+        secondmail(leadname+","+mem2+","+mem3+","+mem4+","+mem5,email)
         return redirect("success")
     return render(request,"reg_valo.html")
 

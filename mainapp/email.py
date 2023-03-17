@@ -1,9 +1,9 @@
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 from django.conf import settings
-def sendmail(name,email):
+def sendmail(name,email,event=None):
     content=f"""<h2>Dear {name},</h2><br>,
-    Thank you for registering for our national level technical symposium, <strong>Kranti2k23</strong>. We are excited to have you join us for this exciting event that will showcase some of the latest technological advancements in the industry.
+    Thank you for registering for <strong>{event} </strong>of our national level technical symposium, <strong>Kranti2k23</strong>. We are excited to have you join us for this exciting event that will showcase some of the latest technological advancements in the industry.
 
     Your registration has been confirmed and we look forward to seeing you at the event. Here are some important details that you will need to keep in mind:
 <br>

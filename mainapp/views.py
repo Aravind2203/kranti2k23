@@ -13,10 +13,13 @@ def registerSolo(request):
         college=request.POST.get("ticket-a")
         event=request.POST.get("my-dropdown")
         year_of_study=request.POST.get("ticket-c")
-        r=Registration(name=name,number=number,email=email,college=college,event_name=event,year_of_study=year_of_study)
-        r.save()
-        sendmail(name,email,event)
-        secondmail(name,email)
+        try:
+            r=Registration(name=name,number=number,email=email,college=college,event_name=event,year_of_study=year_of_study)
+            r.save()
+            sendmail(name,email,event)
+            secondmail(name,email)
+        except:
+            pass
         return redirect("success")
     return render(request,"reg-solo.html")
 
@@ -34,10 +37,13 @@ def registerTeam(request):
         member_1=request.POST.get("mem1","")
         member_2=request.POST.get("mem2","")
         member_3=request.POST.get("mem3","")
-        r=Registration(name=name,number=number,email=email,college=college,event_name=event,year_of_study=year_of_study,team_count=team_count,head_name=head_name,member_1=member_1,member_2=member_2,member_3=member_3)
-        r.save()
-        sendmail(name,email,event)
-        secondmail(name,email)
+        try:
+            r=Registration(name=name,number=number,email=email,college=college,event_name=event,year_of_study=year_of_study,team_count=team_count,head_name=head_name,member_1=member_1,member_2=member_2,member_3=member_3)
+            r.save()
+            sendmail(name,email,event)
+            secondmail(name,email)
+        except:
+            pass
         return redirect("success")
     return render(request,"reg-team.html")
 
@@ -55,10 +61,14 @@ def registerFifa(request):
         online_eve_name=request.POST.get("my-dropdown","")
         year_of_study=request.POST.get("ticket-c",0)
         attachment=request.FILES.get("filename","")
-        r=FifaRegistration(email=email,team_name=team_name,college_name=college_name,member1=member_name1,member2=member_name2,phone1=mem1_phno,phone2=mem2_phno,event=online_eve_name,year_of_study=year_of_study)
-        r.save()
-        sendmail(member_name1,email,online_eve_name)
-        secondmail(member_name1+","+member_name2,email)
+        
+        try:
+            r=FifaRegistration(email=email,team_name=team_name,college_name=college_name,member1=member_name1,member2=member_name2,phone1=mem1_phno,phone2=mem2_phno,event=online_eve_name,year_of_study=year_of_study)
+            r.save()
+            sendmail(member_name1,email,online_eve_name)
+            secondmail(member_name1+","+member_name2,email)
+        except:
+            pass
         return redirect("success")
         
     return render(request,"reg-fifa.html")
@@ -77,20 +87,23 @@ def registerCod(request):
         year=request.POST.get("ticket-c")
         payment=request.FILES.get("filename","")
         college_name=request.POST.get("ticket-a","")
-        r=CodRegistration(
-            team_name=team_name,
-            lead_name=lead_name,
-            lead_ph_no=lead_ph_no,
-            mem2=mem2,
-            mem3=mem3,
-            email=email,
-            event_name=event_name,
-            year=year,
-            college_name=college_name
-        )
-        r.save()
-        sendmail(lead_name,email,event_name)
-        secondmail(lead_name+','+mem2+","+mem3,email)
+        try:
+            r=CodRegistration(
+                team_name=team_name,
+                lead_name=lead_name,
+                lead_ph_no=lead_ph_no,
+                mem2=mem2,
+                mem3=mem3,
+                email=email,
+                event_name=event_name,
+                year=year,
+                college_name=college_name
+            )
+            r.save()
+            sendmail(lead_name,email,event_name)
+            secondmail(lead_name+','+mem2+","+mem3,email)
+        except:
+            pass
         return redirect("success")
     
         
@@ -118,31 +131,33 @@ def registerValo(request):
         event_name=request.POST.get("my-dropdown","")
         year=request.POST.get("ticket-c","")
         
+        try:
+            r=ValoRegistration(
+                teamname=teamname,
+                leadname=leadname,
+                leadnumber=leadnumber,
+                riotid=riotid,
+                discordid=discordid,
+                mem2=mem2,
+                mem2dis=mem2dis,
+                mem2ph=mem2ph,
+                mem3=mem3,
+                mem3dis=mem3dis,
+                mem4=mem4,
+                mem4dis=mem4dis,
+                mem5=mem5,
+                mem5dis=mem5dis,
+                event_name=event_name,
+                email=email,
+                year=year,
+                college_name=college_name,
 
-        r=ValoRegistration(
-            teamname=teamname,
-            leadname=leadname,
-            leadnumber=leadnumber,
-            riotid=riotid,
-            discordid=discordid,
-            mem2=mem2,
-            mem2dis=mem2dis,
-            mem2ph=mem2ph,
-            mem3=mem3,
-            mem3dis=mem3dis,
-            mem4=mem4,
-            mem4dis=mem4dis,
-            mem5=mem5,
-            mem5dis=mem5dis,
-            event_name=event_name,
-            email=email,
-            year=year,
-            college_name=college_name,
-           
-        )
-        r.save()
-        sendmail(leadname,email,event_name)
-        secondmail(leadname+","+mem2+","+mem3+","+mem4+","+mem5,email)
+            )
+            r.save()
+            sendmail(leadname,email,event_name)
+            secondmail(leadname+","+mem2+","+mem3+","+mem4+","+mem5,email)
+        except:
+            pass
         return redirect("success")
     return render(request,"reg_valo.html")
 
